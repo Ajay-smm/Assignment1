@@ -9,20 +9,15 @@ import org.springframework.stereotype.Repository;
 
 import org.springframework.data.domain.Pageable;
 //import org.springframework.data.domain.Sort;
-import com.student.entity.Student;
+import com.student.entity.Teacher;
 
 //import java.awt.print.Pageable;
 import java.util.List;
 
 @Repository
-public interface StudentRepository extends MongoRepository<Student, ObjectId> {
+public interface TeacherRepository extends MongoRepository<Teacher, ObjectId> {
+    Teacher findBySubject(String subject);
 
-
-
-    @Query("{}")
-    List<Student> printTopStudents(Pageable pageable);
-
-    Student findByName(String name);
 
 
 

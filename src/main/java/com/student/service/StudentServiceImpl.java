@@ -1,6 +1,7 @@
 package com.student.service;
 
 import com.student.entity.Student;
+import com.student.entity.Teacher;
 import com.student.repository.StudentRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,13 +87,17 @@ import java.util.List;
 
         }
 
+    @Override
+    public Student getStudentByName(String name) {
+        Student student = studentRepository.findByName(name);
 
-
-
-
-
-
-
-
+        if (student != null) {
+            return student;
+        } else {
+            throw new RuntimeException("Student not found with name: " + name);
+        }
     }
+
+
+}
 

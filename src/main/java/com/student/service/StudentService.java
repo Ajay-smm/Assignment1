@@ -12,7 +12,7 @@ public interface StudentService {
     String updateStudent( ObjectId id,  Student updatedStudent);
     String deleteStudent(ObjectId id);
     List<Student> topThreeStudents();
-
+    Student getStudentByName(String name);
 
 
 
