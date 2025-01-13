@@ -41,7 +41,7 @@ public class StandardController {
         return standardService.deleteStandard(id);
     }
 
-    @GetMapping("/toprank")
+    @GetMapping("/gettoprank")
     public Standard getTopRankedStudent()
     {
 
